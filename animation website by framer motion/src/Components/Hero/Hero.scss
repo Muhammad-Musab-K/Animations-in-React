@@ -1,0 +1,129 @@
+@import "../../App.scss";
+
+.hero {
+    height: calc(100vh - 100px);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+
+    .imageContainer {
+
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+          
+
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .wrapper {
+        max-width: 1266px;
+        width: 866px;
+        margin: auto;
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            justify-content: center;
+            margin: 0;
+          
+
+        }
+
+
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include mobile {
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                transform: none !important;
+            }
+
+            h2 {
+                letter-spacing: 10px;
+                color: rgb(77, 21, 77);
+
+
+                @include mobile {
+                    font-size: 18px;
+                    letter-spacing: 4px;
+                }
+            }
+
+            h1 {
+                font-size: 35px;
+                color: white;
+                width: 60%;
+
+                @include mobile {
+                    font-size: 22px;
+                    width: 80%;
+                    margin: auto;
+                    text-align: center;
+                }
+            }
+
+            .buttons {
+                button {
+                    padding: 10px;
+                    background-color: transparent;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    margin-right: 6px;
+                    color: white;
+
+
+                    @include mobile {
+                        padding: 8px;
+                        font-size: 12px;
+                        border: 1px solid white;
+                        border-radius: 8px;
+                    }
+                }
+
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .backText {
+        font-size: 186px;
+        position: absolute;
+        color: #ffffff09;
+        bottom: 0;
+        white-space: nowrap;
+        width: 50%;
+        font-weight: bolder;
+
+        @include mobile {
+            font-size: 120px;
+        }
+
+    }
+
+
+}

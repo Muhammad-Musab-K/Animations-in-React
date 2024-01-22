@@ -1,0 +1,107 @@
+@import '../../App.scss';
+
+.mainBox {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    max-width: 1000;
+    width: 900px;
+    height: 100%;
+    margin: auto;
+    color: white;
+    align-items: center;
+    overflow: hidden;
+
+    @include mobile {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .contactBox {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        @include mobile {
+            margin-top: 30px;
+            gap: 3px;
+        }
+
+
+
+        h1 {
+            font-size: 60px;
+            font-weight: bold;
+            color: white;
+
+            @include mobile {
+                gap: 3px;
+                font-size: 30px;
+            }
+        }
+
+        .item {
+            h2 {
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .form {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .phoneSvg {
+            position: absolute;
+            stroke: orange;
+            z-index: -1;
+
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            @include mobile {
+                gap: 10px;
+            }
+
+            input {
+                width: 400px;
+                padding: 14px;
+                background-color: transparent;
+                color: white;
+                border: 1px solid gray;
+                border-radius: 5px;
+
+                @include mobile {
+                    gap: 5px;
+                    width: 300px;
+                    padding: 9px;
+                }
+            }
+
+            textarea {
+                padding: 16px;
+                background-color: transparent;
+                color: white;
+                border-radius: 5px;
+            }
+
+            button {
+                padding: 13px 0;
+                background-color: orange;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}

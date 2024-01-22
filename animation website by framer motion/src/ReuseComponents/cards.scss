@@ -1,0 +1,48 @@
+@import '../App.scss';
+
+
+.cards{
+    height: 250px;
+    width: 250px;
+    border: 1px solid white;
+    border-radius:5px;
+    background-color: transparent;
+    padding: 10px 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+
+    @include mobile {
+        height: 100px;
+        width: 250px;
+        padding: 5px 7px;
+        
+    }
+
+    .heading{
+        font-size: 20px;
+        font-weight: bold;
+
+        @include mobile{
+            font-size: 15px;
+        }
+        
+    }
+    .para{
+        font-size: 10px;
+       overflow: hidden;
+    }
+    .btn{
+        padding: 10px 20px;
+        background-color: orange;
+        border-radius: 10px;
+        text-align: center;
+        color: black;
+
+        @include mobile{
+            padding: 5px 5px;
+        }
+    }
+
+} 
