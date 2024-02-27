@@ -1,0 +1,68 @@
+@use '../ScssVaribale/fonts' as font;
+@import '../ScssVaribale/Mixin.scss';
+
+
+
+.container {
+    @include containerNoHeight;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+
+    .box {
+        @include container1;
+        @include flexbody(start);
+        flex-direction: column;
+        margin: auto;
+        @include mobile{
+            @include flexcolumn(column, 20px);
+            width: 100%;
+          
+        }
+
+        .content {
+            @include flexcolumn(row, 20px);
+            justify-content: space-between;
+            width: 100%;
+
+            @include mobile{
+                @include flexcolumn(column, 0px);
+                padding: 0 40px;
+                
+            }
+
+            .contentItem {
+                @include flexcolumn(column);
+                margin-top: 180px;
+                
+            @include mobile{
+                  margin-top:30px ;
+            }
+
+
+
+                h3 {
+                    font-size: font.$font-sm;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: font.$font-xs;
+                    text-align: center;
+                }
+            }
+        }
+
+        .subHeading {
+            padding: 50px 140px;
+            text-align: center;
+            
+            @include mobile{
+                font-size: font.$font-xs;
+                padding: 10px 10px;
+                width: 100%;
+                @include flexSpace(center)
+          }
+        }
+    }
+}

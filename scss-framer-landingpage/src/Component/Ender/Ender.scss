@@ -1,0 +1,101 @@
+@use '../ScssVaribale/fonts' as font;
+@import '../ScssVaribale/Mixin.scss';
+
+
+.ender {
+       width: 100%;
+       margin-top: 10px;
+       margin-bottom: 10px;
+       @include flexcolumn(column , 50px);
+
+       .box {
+              @include container1;
+              @include flexbody(start);
+              flex-direction: column;
+              margin: auto;
+
+              @include mobile {
+                     @include flexcolumn(column, 20px);
+                     width: 100vw;
+              }
+
+              .content {
+                     @include flexcolumn(row, 20px);
+                     justify-content: space-between;
+                     width: 100%;
+
+                     @include mobile {
+                            @include flexcolumn(column, 0px);
+                            padding: 0 40px;
+                     }
+                     .contentItem {
+                            @include flexcolumn(column);
+                            @include mobile {
+                            }
+                            h3 {
+                                   font-size: font.$font-sm;
+                                   text-align: center;
+                            }
+                            p {
+                                   font-size: font.$font-xs;
+                                   text-align: center;
+                            }
+                     }
+              }
+
+       }
+
+       .animatedBox {
+              width: 80%;
+              height: 450px;
+              margin: auto !important;
+              background-color: #4F46E5;
+              position: relative;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              overflow: hidden;
+
+              .cell {
+                     width: 700px;
+                     height: 700px;
+                     position: relative;
+                     border-radius: 50%;
+
+                     .contents {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+
+                            h1 {
+                                   text-align: center;
+                                   color: white;
+                            }
+
+                            p {
+                                   text-align: center;
+                                   color: white;
+                            }
+                     }
+
+                     .nucleus2 {
+                            @include animation(700px, 700px, 90px, 0, 0, 4s)
+                     }
+
+                     .nucleus3 {
+                            @include animation(800px, 800px, 103px, 0, 0, 3s)
+                     }
+
+                     .nucleus4 {
+                            @include animation(900px, 900px, 120px, 0, 0, 2s)
+                     }
+
+                     .nucleus5 {
+                            @include animation(1000px, 1000px, 130px, 0, 0, 3.5s)
+                     }
+
+              }
+
+       }
+}

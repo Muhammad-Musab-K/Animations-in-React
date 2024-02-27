@@ -1,0 +1,111 @@
+@use '../ScssVaribale/fonts' as font;
+@import '../ScssVaribale/Mixin.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainBox {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: calc(100vh - 47px);
+    color: white;
+
+
+    @include mobile {
+        overflow-x: hidden;
+        height: calc(90vh - 47px);
+    }
+    .box {
+        @include container1;
+        @include flexbody(start);
+        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        
+        @include mobile {
+          align-items: center
+        }
+        .head {
+            @include flexbody;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            padding: 20px 50px;
+            gap: 10px;
+
+            @include mobile {
+                padding-top: 50px;
+                transform: none !important;   
+            }
+
+            h1 {
+                font-size: font.$font-3xl ;
+                @include gradient-font (rgb(0, 151, 255), linear-gradient(90deg, rgba(0, 151, 255, 1) 17%, rgba(158, 0, 255, 1) 70%));
+
+                @include mobile {
+                    font-size: font.$font-xl;
+                    text-align: center;
+                }
+            }
+
+            p {
+                text-align: center;
+                font-size: font.$font-sm;
+
+                @include mobile {
+                    font-size: font.$font-xs;
+
+                }
+            }
+
+            .demo {
+                position: relative;
+                font-size: font.$font-md;
+
+                @include mobile {
+                    font-size: font.$font-sm;
+
+                }
+
+                svg {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    bottom: 2px;
+
+                    @include mobile {
+                        width: 15px;
+                        height: 15px;
+                        bottom: 3px;
+                    }
+                }
+            }
+        }
+
+        .play {
+            width: 100%;
+            bottom: -140px;
+            position: absolute;
+
+            @include mobile {
+                bottom: 0;
+                transform: none !important;    
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                width:100%;
+                @include mobile {
+                   width: 320px;
+                }
+
+            }
+        }
+    }
+}

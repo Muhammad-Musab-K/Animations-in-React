@@ -1,0 +1,92 @@
+@use '../ScssVaribale/fonts' as font;
+@import '../ScssVaribale/Mixin.scss';
+
+
+.logoSection {
+    @include containerNoHeight;
+    margin-bottom: 20px;
+    background-color: black !important;
+    @include flexbody;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 50px;
+    overflow: hidden !important;
+
+    h1 {
+        color: rgb(45, 45, 45);
+        font-size: font.$font-2xl;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+    .box1 {
+        display: flex;
+        gap: 45px;
+
+        img {
+            width: 120px;
+            @include mobile{
+                width:80px;          
+            }
+        }
+    }
+    .box2 {
+        display: flex;
+        gap: 35px;
+
+        img {
+            width: 120px;
+            @include mobile{
+                width:80px;          
+            }
+        }
+    }
+
+    .box3 {
+        display: flex;
+        gap: 30px;
+
+        img {
+            width: 120px;
+            @include mobile{
+                width:80px;          
+            }
+        }
+    }
+    .box4{
+        @include flexcolumn(column , 15px);
+        
+        .interview {
+            font-size: font.$font-sm;
+            width: 160px;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            @include gradient-line (rgb(0, 151, 255), linear-gradient(90deg, rgb(91, 165, 214) 17%, rgb(158, 101, 196) 70%));
+            @include mobile{
+                width:120px;      
+                font-size: font.$font-xs;
+                padding: 8px;
+
+    
+            }
+        }
+        .try{
+            width: 90px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            @include mobile{
+                width:100px;      
+                font-size: font.$font-xs;
+                padding: 8px;
+
+    
+            }
+
+        }
+    }
+}

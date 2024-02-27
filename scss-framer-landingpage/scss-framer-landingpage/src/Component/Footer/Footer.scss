@@ -1,0 +1,52 @@
+@use '../ScssVaribale/fonts' as font;
+@import '../ScssVaribale/Mixin.scss';
+
+
+
+.footer{
+    padding-bottom: 100px;
+     @include containerNoHeight;
+     @include flexbody;
+     color: white;
+     gap: 20px;
+     flex-direction: column;
+     background-color: black;
+   .discover{
+    @include mobile{
+        width: 100%;
+        text-align: center;
+    }
+    h1{
+        font-weight: 300;
+    }
+   }
+   .counter{
+    @include flexbody();
+    @include gradient-line (rgb(0, 151, 255), linear-gradient(90deg, rgba(0, 151, 255, 1) 17%, rgba(158, 0, 255, 1) 70%));
+    padding-left: 0.5px;
+    @include mobile{
+        flex-direction: column;
+    }
+    
+
+    .rating{
+         padding:30px 60px; 
+         padding-right:80px;
+         background-color: black;
+         margin: 0.5px;
+         @include mobile{
+            width: 100%;
+            margin:0px;
+            padding-right:60px;
+            text-align: center;
+        }
+         h1{
+            font-weight: 300;
+         }
+         p{
+            font-size: font.$font-xs;
+            color: gray;
+         }
+    }
+}
+}

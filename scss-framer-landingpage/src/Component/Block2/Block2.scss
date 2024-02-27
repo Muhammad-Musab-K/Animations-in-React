@@ -1,0 +1,66 @@
+@use '../ScssVaribale/fonts' as font;
+@import '../ScssVaribale/Mixin.scss';
+
+
+.container1 {
+    @include containerNoHeight;
+    @include flexbody;
+
+    .block {
+        @include container2;
+        @include flexbody;
+
+        .descrip {
+            width: 50%;
+            @include mobile{
+                width: 100%;   
+                padding-right: 10px;
+                transform: none !important;    
+             }
+
+            @include flexcolumn(column, 20px);
+            align-items: end;
+
+
+            h1 {
+                font-size: font.$font-5xl;
+                color:black;
+                font-weight: bold;
+            }
+
+            h2 {
+                color: black;
+                font-size: font.$font-xl;
+            }
+
+            p {
+                width: 90%;
+                font-size: font.$font-xms;
+            }
+
+            button {
+                font-size: font.$font-sm;
+                width: 160px;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                @include gradient-line (rgb(0, 151, 255), linear-gradient(90deg, rgb(91, 165, 214) 17%, rgb(158, 101, 196) 70%))
+            }
+        }
+    }
+
+    .imageSection {
+        width: 50%;
+        @include mobile{
+            width: 100%;  
+            padding-left: 10px;  
+            transform: none !important;      
+         }
+
+
+        img {
+            width: 100%
+        }
+    }
+}

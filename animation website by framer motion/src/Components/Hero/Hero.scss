@@ -113,6 +113,7 @@
     .backText {
         font-size: 186px;
         position: absolute;
+        z-index: -1;
         color: #ffffff09;
         bottom: 0;
         white-space: nowrap;

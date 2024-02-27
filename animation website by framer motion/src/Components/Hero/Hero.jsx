@@ -1,5 +1,6 @@
 import React from 'react'
 import hero from '../../images/hero.png'
+import musab from '../../images/musab.png'
 import scroll from "../../images/scroll.png"
 import { motion } from 'framer-motion'
 import "./Hero.scss";
@@ -38,7 +39,7 @@ function Hero() {
     return (
         <div className='hero'>
             <div className='imageContainer'>
-                <img src={hero} alt="" />
+                <img src={musab} alt="" />
             </div>
             <div className='wrapper'>
                 <motion.div variants={variants} initial="initial" whileInView="animate" className='textContainer'>
